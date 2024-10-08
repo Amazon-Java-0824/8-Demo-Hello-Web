@@ -8,10 +8,10 @@ import java.util.List;
 @Service
 public class GreetingService {
 
-    public Greeting sayHello(){
-        var greeting = new Greeting();
-        greeting.setMessage("Hello, World!");
-        return greeting;
+    public Greeting sayHello(String name){
+        if(name == null)
+            return new Greeting("Hello World!");
+        return new Greeting("Hello, " + name);
     }
 
 
